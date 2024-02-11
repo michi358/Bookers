@@ -1,4 +1,29 @@
-<h1>Books#index</h1>
+<h1>Books</h1>
+<% @books .each do |book| %>
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Body</th>
+        <th colspan= '3'>空のセル</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= book.title %></td>
+        <td><%= book.body %></td>
+        <td><div class= nav><%= link_to 'Show',"show/#{book.id}" %></div></td>
+        <td><div class= nav><%= link_to "Edit","edit/#{book.id}" %></div></td>
+        <td><div class= nav><%= link_to "Destroy","destroy/#{book.id}" %></div></td>
+      </tr>
+      
+    </tbody>
+  </table>
+    
+  
+<% end %>
+    
+  
 
 
 
