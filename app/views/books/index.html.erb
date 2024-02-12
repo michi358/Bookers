@@ -1,3 +1,7 @@
+<div>
+  <%= flash[:notice] %>
+</div>
+
 <h1>Books</h1>
 <% @books .each do |book| %>
   <table>
@@ -16,16 +20,9 @@
         <td><div class= nav><%= link_to "Edit",edit_book_path(book.id) %></div></td>
         <td><div class= nav><%= link_to "Destroy",book_path(book.id), method: :delete, "data-confirm" => "Are you sure?" %></div></td>
       </tr>
-
-    </tbody>
+   </tbody>
   </table>
-
-
 <% end %>
-
-
-
-
 
 <!--新規投稿機能-->
 <h2>New book</h2>
