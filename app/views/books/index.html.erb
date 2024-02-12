@@ -12,18 +12,18 @@
       <tr>
         <td><%= book.title %></td>
         <td><%= book.body %></td>
-        <td><div class= nav><%= link_to 'Show',"show/#{book.id}" %></div></td>
-        <td><div class= nav><%= link_to "Edit","edit/#{book.id}" %></div></td>
-        <td><div class= nav><%= link_to "Destroy","destroy/#{book.id}" %></div></td>
+        <td><div class= nav><%= link_to 'Show',book_path(book.id) %></div></td>
+        <td><div class= nav><%= link_to "Edit",edit_book_path(book.id) %></div></td>
+        <td><div class= nav><%= link_to "Destroy",book_path(book.id), method: :delete, "data-confirm" => "Are you sure?" %></div></td>
       </tr>
-      
+
     </tbody>
   </table>
-    
-  
+
+
 <% end %>
-    
-  
+
+
 
 
 
